@@ -1,0 +1,81 @@
+<div class="bs-component">
+    <div class="navbar navbar-info">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="javascript:void(0)">QUALIMEDIA</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Ponto <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#/home">Marcar ponto</a></li>
+                        <li><a href="#/relatorio">Relatório de Ponto</a></li>
+                        <li><a href="#/relatorio-consolidado">Relatório de Consolidado</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <!-- <li><a href="#/alterar.html">Alterar senha</a></li> -->
+                <li><a href="" ng-click="logout()">Sair</a></li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12">
+    <div class="container">
+        <br>
+        <br>
+        <div class="panel panel-default">
+            <div class="panel-heading text-center">
+                <br>
+
+            <h1>ALTERAR SENHA</h1>
+            <br>
+            <br>
+
+            </div>
+            <div class="panel-body">
+
+                <form class="form-horizontal" role="form" name="form2">
+                    <fieldset>
+                        
+                        <div class="form-group">
+                            <label for="inputPassword" class="col-lg-2 control-label">Senha antiga</label>
+                            <div class="col-lg-10">
+                                <input type="password" class="form-control" id="inputPassword" placeholder="Digite seu Senha" ng-model="user.oldpass" required>
+                                
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword" class="col-lg-2 control-label">Nova Senha</label>
+                            <div class="col-lg-10">
+                                <input type="password" class="form-control" id="inputPassword" placeholder="Digite seu Senha" ng-model="user.newpass" required>
+                                
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword" class="col-lg-2 control-label">Confirmar Senha</label>
+                            <div class="col-lg-10">
+                                <input type="password" class="form-control" id="inputPassword" placeholder="Digite seu Senha" ng-model="user.newpass2" required>
+                                
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-10 col-lg-offset-2">
+                                <button class="btn btn-info" type="submit" ng-click="newPass(user)" ng-disabled="form2.$invalid">ENTRAR</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

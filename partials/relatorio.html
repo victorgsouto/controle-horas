@@ -1,0 +1,79 @@
+<div class="bs-component">
+    <div class="navbar navbar-info">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="javascript:void(0)">QUALIMEDIA</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Ponto <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#/home">Marcar ponto</a></li>
+                        <li><a href="#/relatorio">Relatório de Ponto</a></li>
+                        <li><a href="#/relatorio-consolidado">Relatório de Consolidado</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <!-- <li><a href="#/alterar-senha">Alterar senha</a></li> -->
+                <li><a href="" ng-click="logout()">Sair</a></li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th class="text-center">Data</th>
+                <th class="text-center">Hora Chegada</th>
+                <th class="text-center">Inicio Intervalo</th>
+                <th class="text-center">Retorno Intervalo</th>
+                <th class="text-center">Hora Saida</th>
+                <th class="text-center">Horas Trabalhadas</th>
+                <th class="text-center">Hora Pagar</th>
+                <th class="text-center">Hora Extra</th>
+                <th class="text-center">Obs</th>
+            </tr>
+        </thead>
+        <tbody infinite-scroll='myPagingFunction()' infinite-scroll-distance='1'>
+            <tr ng-repeat="ponto in pontos" ng-class="menosQue(ponto.9)">
+                <td align="center">{{ponto.2 | date:"MM/dd/yyyy"}}</td>
+                <td align="center">{{ponto.3}}</td>
+                <td align="center">{{ponto.4}}</td>
+                <td align="center">{{ponto.5}}</td>
+                <td align="center">{{ponto.6}}</td>
+                <td align="center">{{ponto.9}}</td>
+                <td align="center">{{ponto.11}}</td>
+                <td align="center">{{ponto.10}}</td>
+                <td align="center" >
+                    <a href="#" data-placement="left" title="{{ponto.8}}" data-toggle="tooltip" data-placement="top" tooltip ng-show="ponto.8">
+                    <div class="icon-preview"><i class="mdi-notification-sms"></i></div></a> 
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- <div >
+  <div infinite-scroll='reddit.nextPage()' infinite-scroll-disabled='reddit.busy' infinite-scroll-distance='1'>
+    <div ng-repeat='item in reddit.items'>
+      <span class='score'>{{item.score}}</span>
+      <span class='title'>
+        <a ng-href='{{item.url}}' target='_blank'>{{item.title}}</a>
+      </span>
+      <small>by {{item.author}} -
+        <a ng-href='http://reddit.com{{item.permalink}}' target='_blank'>{{item.num_comments}} comments</a>
+      </small>
+      <div style='clear: both;'></div>
+    </div>
+    <div ng-show='reddit.busy'>Loading data...</div>
+  </div>
+</div> -->
