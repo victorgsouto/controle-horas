@@ -1,11 +1,7 @@
 <?php
   date_default_timezone_set('America/Sao_Paulo');
 
-  $conexao = new mysqli('localhost', 'root', '', 'cartao_ponto');
-
-  if ($conexao->connect_error) {
-      die("Connection failed: " . $conn->connect_error);
-  } 
+  include_once("conexao.php");
 
   $user=json_decode(file_get_contents('php://input'));
 

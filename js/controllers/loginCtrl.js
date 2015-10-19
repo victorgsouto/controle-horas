@@ -5,9 +5,7 @@ app.controller('loginCtrl', ['$scope','loginService', function ($scope,loginServ
 	
   $scope.msgtxt='';
 
-
-
-	$scope.login=function(data){
+  $scope.login=function(data){
     
 		loginService.login(data, $scope); 
 

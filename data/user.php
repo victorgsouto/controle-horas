@@ -1,10 +1,6 @@
 <?php 
   
-  $conexao = new mysqli('localhost', 'root', '', 'cartao_ponto');
-
-  if ($conexao->connect_error) {
-      die("Connection failed: " . $conn->connect_error);
-  } 
+  include_once("conexao.php");
 
   //recebe valores do js e transforma em objeto
   $user=json_decode(file_get_contents('php://input'));

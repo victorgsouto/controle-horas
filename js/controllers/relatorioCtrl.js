@@ -6,7 +6,7 @@ app.controller('relatorioCtrl', ['$scope','loginService','pontoService', functio
     loginService.logout();
   }
 
-  $scope.pontos = getPontos;
+  //$scope.pontos = getPontos;
 
   $scope.menosQue = function(item){
     if(item < '08:00:00'){
@@ -18,14 +18,14 @@ app.controller('relatorioCtrl', ['$scope','loginService','pontoService', functio
 
   pontoService.getSobre().success(function (data) {
    
-      ab = data;
+      $scope.pontos = data;
       //console.log(ab.length);
 
   });   
 
-  console.log(ab);
+  //console.log(ab);
 
-  $scope.myPagingFunction = function(){
+  //$scope.myPagingFunction = function(){
     //console.log("a"); 
 
     //var last = $scope.pontos[$scope.pontos.length - 1];
@@ -34,7 +34,7 @@ app.controller('relatorioCtrl', ['$scope','loginService','pontoService', functio
     // for(var i = 1; i <= 8; i++) {
     //   $scope.pontos.push(last + i);
     // }
-  }; 
+  //}; 
 
 }]);
 
